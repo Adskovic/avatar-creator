@@ -3,33 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Art Avatar Creator</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Avatar Creator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <h1>Pixel Art Avatar Creator</h1>
+    <canvas id="pixelCanvas" width="246" height="246"></canvas>
     <div id="controls">
-        <label for="hair">Hair Style:</label>
-        <select id="hair">
-            <option value="hair1">Style 1</option>
-            <option value="hair2">Style 2</option>
-        </select>
-        <br>
-        <label for="eyes">Eye Color:</label>
-        <select id="eyes">
-            <option value="eyes1">Color 1</option>
-            <option value="eyes2">Color 2</option>
-        </select>
-        <br>
-        <label for="skin">Skin Color:</label>
-        <select id="skin">
-            <option value="skin1">Color 1</option>
-            <option value="skin2">Color 2</option>
-        </select>
+        <div class="control-group">
+            <button class="arrow left" data-type="hair">←</button>
+            <span>Hair Style</span>
+            <button class="arrow right" data-type="hair">→</button>
+        </div>
+        <div class="control-group">
+            <button class="arrow left" data-type="eyes">←</button>
+            <span>Eye Color</span>
+            <button class="arrow right" data-type="eyes">→</button>
+        </div>
+        <div class="control-group">
+            <button class="arrow left" data-type="skin">←</button>
+            <span>Skin Color</span>
+            <button class="arrow right" data-type="skin">→</button>
+        </div>
     </div>
-    <canvas id="pixelCanvas" width="256" height="256"></canvas>
     <br>
     <button id="saveButton">Save Avatar</button>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
