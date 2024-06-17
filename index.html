@@ -7,27 +7,31 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Pixel Art Avatar Creator</h1>
-    <canvas id="pixelCanvas" width="246" height="246"></canvas>
-    <div id="controls">
-        <div class="control-group">
-            <button class="arrow left" data-type="hair">←</button>
-            <span>Hair Style</span>
-            <button class="arrow right" data-type="hair">→</button>
+    <div class="container">
+        <h1>Pixel Art Avatar Creator</h1>
+        <div class="app-container">
+            <canvas id="pixelCanvas" width="256" height="256"></canvas>
+            <div id="controls">
+                <div class="control-group">
+                    <button class="arrow left" data-type="hair">←</button>
+                    <span>Hair Style</span>
+                    <button class="arrow right" data-type="hair">→</button>
+                </div>
+                <div class="control-group">
+                    <button class="arrow left" data-type="eyes">←</button>
+                    <span>Eye Color</span>
+                    <button class="arrow right" data-type="eyes">→</button>
+                </div>
+                <div class="control-group">
+                    <button class="arrow left" data-type="skin">←</button>
+                    <span>Skin Color</span>
+                    <button class="arrow right" data-type="skin">→</button>
+                </div>
+            </div>
         </div>
-        <div class="control-group">
-            <button class="arrow left" data-type="eyes">←</button>
-            <span>Eye Color</span>
-            <button class="arrow right" data-type="eyes">→</button>
-        </div>
-        <div class="control-group">
-            <button class="arrow left" data-type="skin">←</button>
-            <span>Skin Color</span>
-            <button class="arrow right" data-type="skin">→</button>
-        </div>
+        <br>
+        <button id="saveButton">Save Avatar</button>
     </div>
-    <br>
-    <button id="saveButton">Save Avatar</button>
     <script src="script.js"></script>
 </body>
 </html>
