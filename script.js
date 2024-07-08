@@ -7,18 +7,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const options = {
         hair: ['hair1', 'hair2'],
         eyes: ['eyes_blue', 'eyes_brown', 'eyes_green'],
-        skin: ['skin1', 'skin2', 'skin3']
+        skin: ['skin1', 'skin2', 'skin3', 'skin4', 'skin5']
     };
 
     const images = {
-        hair1: 'images/hair1.png',
-        hair2: 'images/hair2.png',
-        eyes_blue: 'images/eyes_blue.png',
-        eyes_brown: 'images/eyes_brown.png',
-        eyes_green: 'images/eyes_green.png',
-        skin1: 'images/Sprite-0001.png',
-        skin2: 'images/Sprite-0002.png',
-        skin3: 'images/Sprite-0003.png'
+        hair1: 'images/hairstyle1.png',
+        hair2: 'images/hairstyle3.png',
+        eyes_blue: 'images/eyes-blue.png',
+        eyes_brown: 'images/eyes-brown.png',
+        eyes_green: 'images/eyes-green.png',
+        skin1: 'images/head_skin_1.png',
+        skin2: 'images/head_skin_2.png',
+        skin3: 'images/head_skin_3.png',
+        skin4: 'images/head_skin_4.png',
+        skin5: 'images/head_skin_5.png'
     };
 
     const currentSelection = {
