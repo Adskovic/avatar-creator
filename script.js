@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const options = {
         hair: ['hair1', 'hair2'],
         eyes: ['eyes_blue', 'eyes_brown', 'eyes_green'],
-        skin: ['skin1', 'skin2', 'skin3', 'skin4', 'skin5']
+        skin: ['skin1', 'skin2', 'skin3', 'skin4', 'skin5'],
+        outfit: ['cloth1', 'cloth2', 'cloth3', 'cloth4', 'cloth5', 'cloth6']
     };
 
     const images = {
@@ -20,13 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
         skin2: 'images/head_skin_2.png',
         skin3: 'images/head_skin_3.png',
         skin4: 'images/head_skin_4.png',
-        skin5: 'images/head_skin_5.png'
+        skin5: 'images/head_skin_5.png',
+        cloth1: 'images/cloth_men_1.png',
+        cloth2: 'images/cloth_men_2.png',
+        cloth3: 'images/cloth_men_3.png',
+        cloth4: 'images/cloth_men_4.png',
+        cloth5: 'images/cloth_men_5.png',
+        cloth6: 'images/cloth_men_6.png',
     };
 
     const currentSelection = {
         hair: 0,
         eyes: 0,
-        skin: 0
+        skin: 0,
+        outfit: 0
     };
 
     function loadImage(src) {
@@ -50,6 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const hairImage = await loadImage(images[options.hair[currentSelection.hair]]);
             ctx.drawImage(hairImage, 0, 0, canvas.width, canvas.height);
+
+            const outfitImage = await loadImage(images[options.outfit[currentSelection.outfit]]);
+            ctx.drawImage(outfitImage, 0, 0, canvas.width, canvas.height);
         } catch (error) {
             console.error('Error loading image:', error);
         }
