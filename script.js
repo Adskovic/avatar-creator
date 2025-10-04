@@ -47,7 +47,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     async function drawAvatar() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        canvas.classList.add('fade');
+
+        setTimeout(async() => {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        
 
         try {
             const skinImage = await loadImage(images[options.skin[currentSelection.skin]]);
@@ -64,6 +69,9 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error) {
             console.error('Error loading image:', error);
         }
+
+        canvas.classList.remove('fade');
+        }, 150);
     }
 
     arrows.forEach(arrow => {

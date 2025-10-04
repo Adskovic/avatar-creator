@@ -14,6 +14,14 @@ body {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(135deg, #153677, #4e085f);
+    animation: fadein 1.5s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadein {
+    to {
+        opacity: 1;
+    }
 }
 
 .app-container {
@@ -42,6 +50,11 @@ canvas {
     border: 2px solid #393E46;
     border-radius: 5px;
     margin-top: 20px;
+    transition: opacity 0.3s ease;
+}
+
+canvas.fade {
+    opacity: 0.4;
 }
 
 #saveButton {
@@ -52,10 +65,12 @@ canvas {
     color: #EEEEEE;
     border-radius: 10px;
     border: 0;
+    transition: all 0.3s ease;
 }
 
 #saveButton:hover {
     background-color: #ce5f15;
+    transform: translateY(-2px);
 }
 
 
@@ -73,10 +88,13 @@ canvas {
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
+    transition: all 0.2s ease;
+    transform: scale(1);
 }
 
 .arrow:hover {
     background-color: #FD7014;
+    transform: scale(1.1);
 }
 
 span {
